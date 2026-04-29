@@ -1,5 +1,5 @@
 {% set name = "mapcat" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mapcat-{{ version }}.tar.gz
-  sha256: b7d69f71934621b5e55d3b15bfb3bdf1d91a95597fcf104de6766b6669816714
+  sha256: 244e54b4c1dfc2c82bc1b6340a0025d16839f1ac0ef75b45977d80f560d71416
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
     - mapcatmigrate = mapcat.helper:migrate
     - mapcatreset = mapcat.toolkit.reset:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -32,6 +32,7 @@ requirements:
     - pydantic-settings
     - pixell
     - h5py
+    - astropydantic
 
 test:
   imports:
