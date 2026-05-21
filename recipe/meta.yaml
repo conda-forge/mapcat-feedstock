@@ -1,5 +1,5 @@
 {% set name = "mapcat" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mapcat-{{ version }}.tar.gz
-  sha256: 754c9bd468e741e211ab1e335d90082e09f541067d9ef6e73c275d60442cd2a7
+  sha256: f19df84f3cf0f3ef83d87ecdf761843152aaee752ebcebc611669d3d64a696d5
 
 build:
   noarch: python
