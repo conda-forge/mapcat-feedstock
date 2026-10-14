@@ -16,7 +16,7 @@ build:
     - mapcatmigrate = mapcat.helper:migrate
     - mapcatreset = mapcat.toolkit.reset:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,6 +33,8 @@ requirements:
     - pixell
     - h5py
     - astropydantic
+    - tqdm
+    - uuid7-standard
 
 test:
   imports:
